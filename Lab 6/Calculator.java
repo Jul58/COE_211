@@ -5,13 +5,14 @@ public class Calculator {
       int num2;
       String operator;
      public Calculator() {
-       Scanner scanCalc = new Scanner(System.in);
+       Scanner scan = new Scanner(System.in);
        System.out.print("Input the first number: ");
-       int num1 = scanCalc.nextInt();
-       System.out.print("The operator:");
-       String operator = scanCalc.nextLine();
-       System.out.print("Input the second number: ");
-       int num2 = scanCalc.nextInt();
+       int num1 = scan.nextInt();
+       System.out.println("Input the operator: ");
+       scan.nextLine();
+       String operator = scan.nextLine();
+       System.out.println("Input the second number: ");
+       int num2 = scan.nextInt();
        switch(operator) {
           case "+" : 
             add(num1, num2);
@@ -21,6 +22,7 @@ public class Calculator {
             break;
           case "*" :
             multiply(num1, num2);
+            break;
           case "%" : 
             divide(num1, num2);
             break;
@@ -48,6 +50,10 @@ public void divide(int num1, int num2) {
   }
 }
 }
+          
+
+
+
           
 
 
